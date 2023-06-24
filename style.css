@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --ff: 'Karla', sans-serif;
+    --br: 10px;
+    --fs: 16px;
+
+    
+ /* Primary */
+--cyan-clr: hsl(179, 62%, 43%);
+--yellow-clr: hsl(71, 73%, 54%);
+
+/* Neutral */
+--light-gray-clr: hsl(204, 43%, 93%);
+--gray-blue-clr: hsl(218, 22%, 67%);
+
+}
+
+*, *::after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    align-content: center;
+    min-height: 100vh;
+    font-family: var(--ff);
+    line-height: 1.6;
+    background: var(--light-gray-clr);
+    color: var(--light-gray-clr);
+    font-weight: 400;
+}
+
+.container {
+    max-width: 500px;
+    width: 85%;
+    margin-inline: auto;
+}
+
+.header {
+    background-color: #fff;
+    padding: 1.8rem 1.5rem;
+    border-radius:  5px 5px 0 0 ;
+}
+
+.title {
+    color: var(--cyan-clr);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--yellow-clr);
+    margin-block: 1rem;
+}
+
+.paragraph {
+    color: var(--gray-blue-clr);
+    font-weight: 400;
+    font-size: 14px;
+    
+}
+
+.grid {
+    display: grid;
+}
+
+.col-1 {
+    background-color: var(--cyan-clr);
+    padding: 1.5rem;
+}
+
+.col-1-title,
+.col-2-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.col-1-price-flex {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.col-1-price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.col-1-price-flex  span {
+    font-size: var(--fs);
+    font-weight: lighter;
+    color: rgba(229, 239, 245, 0.6);
+}
+
+.col-1-btn {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--yellow-clr);
+    font-size: 15px;
+    border: none;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: var(--light-gray-clr);
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 3px rgba(51, 51, 51, 0.2);
+}
+
+.col-2 {
+    background-color: rgba(42, 178, 175, 0.8);
+    padding: 1.5rem;
+    border-radius: 0 0  5px 5px;
+}
+
+.col-2-p {
+    font-weight: 400;
+}
+
+@media(min-width: 900px) {
+    .container {
+        max-width: 650px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .col-1 {
+        border-bottom-left-radius: 5px;
+    }
+
+    .col-2 {
+        border-bottom-left-radius: 0;
+    }
+
+    .col-2-p {
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
